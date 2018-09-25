@@ -1,0 +1,97 @@
+html
+{
+  height: 100%;
+}
+
+#tunningsApp
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#options
+{
+  font-weight: 900;
+  width: 320px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#options:focus
+{
+  outline: none;
+}
+
+#optionPanel
+{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+#stringPanel
+{
+  height: 150px;
+  border-radius: 10px;
+  width: 320px;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+button
+{
+  width: 220px;
+  color: rgba(255, 255, 255, 0);
+  background: black;
+  height: 1px;
+  border: 0px solid black;
+  border-radius: 50%;
+}
+
+button:focus
+{
+  outline: none;
+}
+
+#string
+{
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}
+
+#tunningName
+{
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 0 10px;
+  font-weight: 900;
+  font-size: 16px;
+  width: 290px;
+  text-align: left;
+  font-style: italic;
+}
+
+#footer
+{
+  font-size: 12px;
+  font-weight: 100;
+  font-style: italic;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}

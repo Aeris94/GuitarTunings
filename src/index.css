@@ -1,0 +1,12 @@
+body
+{
+  font-family: 'Myriad Pro','Myriad', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: black;
+  background-image: url('https://s33.postimg.cc/st8z8gqmn/image-48113151-acoustic-guitar-wallpaper-hd-1920x1200.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
