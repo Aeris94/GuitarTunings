@@ -28,12 +28,13 @@ class App extends Component
   
   componentWillMount()
   {
-  fetch('https://gist.githubusercontent.com/Aeris94/1100fd6021accab70a73b95524c48dd8/raw/fc6695684e7d7c118f057c1495806213b1c06db0/QuitarTunnings.json')
-  .then(response => response.json())
-  .then(myJson => {
-      this.setState({tunningsNames: myJson.tunningNames, activeTunning: myJson.Standard, synth: new window.Tone.PolySynth(6, window.Tone.QuitarSynth).toMaster()});
-  });
-}
+    fetch('https://gist.githubusercontent.com/Aeris94/1100fd6021accab70a73b95524c48dd8/raw/fc6695684e7d7c118f057c1495806213b1c06db0/QuitarTunnings.json')
+     .then(response => response.json())
+     .then(myJson => {
+       this.setState({tunningsNames: myJson.tunningNames, 
+		      activeTunning: myJson.Standard,
+		      synth: new window.Tone.PolySynth(6, window.Tone.QuitarSynth).toMaster()});
+  });}
   
   componentDidMount()
   {
@@ -42,9 +43,9 @@ class App extends Component
     const animate = this.animateString;
     
     document.querySelectorAll('button').forEach(function(button){
-	    button.addEventListener('click', function(e){
-		    sound(e.target.textContent);
-        animate(e.target.id);
+	button.addEventListener('click', function(e){
+		sound(e.target.textContent);
+        	animate(e.target.id);
       })
     })
     
@@ -66,28 +67,25 @@ class App extends Component
   
   animateString(stringId)
   {
-   
     document.getElementById(stringId).animate([
-  // keyframes
-  { transform: 'translateY(0px)' }, 
-  { transform: 'translateY(-2px)' },
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(2px)' },    
-], { 
-  // timing options
-  duration: 50,
-  iterations: 20
-});
+  	{ transform: 'translateY(0px)' }, 
+  	{ transform: 'translateY(-2px)' },
+  	{ transform: 'translateY(0px)' },
+  	{ transform: 'translateY(2px)' },],
+	{ 
+  	    duration: 50,
+  	    iterations: 20
+	});
   }
   
   handleOptionChange()
   {
      let select = document.getElementById("options");
      let selectedOption = select.options[select.selectedIndex].text;
-   fetch('https://gist.githubusercontent.com/Aeris94/1100fd6021accab70a73b95524c48dd8/raw/fc6695684e7d7c118f057c1495806213b1c06db0/QuitarTunnings.json')
-  .then(response => response.json())
-  .then(myJson => {
-      this.setState({activeTunning: myJson[selectedOption]});
+     fetch('https://gist.githubusercontent.com/Aeris94/1100fd6021accab70a73b95524c48dd8/raw/fc6695684e7d7c118f057c1495806213b1c06db0/QuitarTunnings.json')
+      .then(response => response.json())
+      .then(myJson => {
+         this.setState({activeTunning: myJson[selectedOption]});
     });     
   }
   
