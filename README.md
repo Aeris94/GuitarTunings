@@ -4,3 +4,5 @@ This application enables user to compare different guitar turnings and play stri
 
 - React.js
 - Tone.js
+
+See app: https://aeris94.github.io/GuitarTunings/
